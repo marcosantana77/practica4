@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="barra">
+        <a class="logo" href="index.html">
+          <h1 class="logo__nombre no-margin centrar-texto">MiPrimerBlog</h1>
+        </a>
+        <nav class="navegacion">
+          <a class="navegacion__enlace" href="#">Inicio</a>
+          <a class="navegacion__enlace" href="#info">Información</a>
+          <a class="navegacion__enlace" href="#sec">Seccion</a>
+          <a class="navegacion__enlace" href="#con">Contacto</a>
+        </nav>
+      </div>
+
+      <div class="header_texto">
+        <h1 class="heading no-margin">Marco Gabriel Santana Suarez</h1>
+        <p>Estudiante de Ing en sistemas</p>
+      </div>
+    </header>
+
+    <main>
+      <div id="info" class="bg-n">
+        <div class="informacion contenedor">
+          <div class="info-principal">
+            <h2>¿Por qué Sistemas?</h2>
+
+            <p>
+              Durante mi tiempo en la preparatoria, tuve la oportunidad de
+              trabajar en un proyecto de creación de una página web. Este
+              proyecto despertó mi curiosidad y pasión por la tecnología y el
+              mundo digital. Desde entonces, supe que quería dedicarme al
+              desarrollo web. Esta experiencia me llevó a tomar la decisión de
+              estudiar Ingeniería en Sistemas, con el objetivo de convertirme en
+              un desarrollador web profesional y poder crear soluciones
+              innovadoras en este fascinante campo.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              tempora dolorem aliquam id accusantium quam quae ullam?
+              Reprehenfderit adipisci commodi quod obcaecati, voluptates
+              perspiciatis quos ducimus distinctio rem blanditiis dolores?
+            </p>
+
+
+          </div>
+          <div class="acerca-de">
+            <h2>Acerca de mi</h2>
+            <div class="p-imagen">
+              <img class="yo" src="{{ url_for('static', filename='imgs/yo2.jpg')}}" alt="" />
+
+              <p>
+                Soy Marco Gabriel Santana Suárez, un estudiante de octavo grado
+                de Ingeniería en Sistemas con una pasión por el desarrollo de
+                software.
+                <br />
+                Desde muy joven, he sentido una fascinación por la tecnología.
+                Actualmente estoy cursando el octavo grado de Ingeniería en
+                Sistemas, donde estoy adquiriendo una sólida base de
+                conocimientos en programación, diseño de software
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sec" class="bg-n">
+        <h2>Mis secciones</h2>
+        <div class="secciones contenedor">
+          <div class="seccion">
+            <h3>Habilidades</h3>
+            <p>
+              Poseo habilidades en programación en varios lenguajes como Python,
+              Java y JavaScript. Además, tengo experiencia en el desarrollo de
+              aplicaciones web y un poco de conocimientos en bases de datos SQL.
+            </p>
+          </div>
+          <div class="seccion">
+            <h3>Estudios</h3>
+            <p>
+              Estoy cursando Ingeniería en Sistemas en el Instituto Tecnológico
+              de Mexicali. Antes, completé mi bachillerato en el CETIS 18, donde
+              desarrollé mi interés por la tecnología y la informática.
+            </p>
+          </div>
+          <div class="seccion">
+            <h3>Hobbies</h3>
+            <p>
+              En mi tiempo libre, disfruto escuchando música de diversos
+              géneros, viendo partidos de fútbol y últimamente he estado yendo
+              al gimnasio para mantenerme en forma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="bg-n">
+      <section id="con">
+        <h2>Contacto</h2>
+
+        <form class="formulario">
+          <fieldset>
+            <legend>Contactame llenando todos los campos</legend>
+
+            <div class="contenedor-campos">
+              <div class="campo">
+                <label>Nombre</label>
+                <input class="input-text" type="text" placeholder="Nombre" />
+              </div>
+
+              <div class="campo">
+                <label>Telefono</label>
+                <input class="input-text" type="tel" placeholder="Telefono" />
+              </div>
+
+              <div class="campo">
+                <label>Email</label>
+                <input class="input-text" type="email" placeholder="Email" />
+              </div>
+
+              <div class="campo">
+                <label>Mensaje</label>
+                <textarea class="input-text" placeholder="Mensaje"></textarea>
+              </div>
+            </div>
+
+            <div class="alinear-derecha flex">
+              <input class="boton w-100 enviar" type="submit" value="Enviar" />
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+
+    <div class="footer bg-n">
+      <div class="contenido-redes">
+        <a href="https://www.facebook.com/profile.php?id=100063834841479">
+          <img
+            class="icon"
+            src="{{ url_for('static', filename='imgs/facebook.png')}}"
+            alt=""
+            width="40px"
+            height="40px"
+          />
+        </a>
+
+        <div class="redes whats flex">
+          <a href="https://wa.me/+526863501339" target="_blank">
+            <img
+              class="icon"
+              src="{{ url_for('static', filename='imgs/whatsapp.png')}}"
+              alt=""
+              width="40px"
+              height="40px"
+            />
+          </a>
+        </div>
+
+        <div class="redes gmail flex">
+          <a href="mailto:mgsantana110@gmail.com" target="_blank">
+            <img
+              class="icon"
+              src="{{ url_for('static', filename='imgs/gmail.png')}}"
+              alt=""
+              width="40px"
+              height="40px"
+            />
+          </a>
+        </div>
+      </div>
+      <p>© 2024 Marco Santana. Todos los derechos reservados.</p>
+    </div>
+  </body>
+</html>
